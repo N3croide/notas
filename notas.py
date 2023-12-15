@@ -35,11 +35,9 @@ while(isActive):
                     elif(opMenu == 3):
                         pass
                     elif(opMenu == 4):
-                        pass
+                        isActiveGrade = False
                     else:
                         pass
-                pass
-
         elif(opMenu == 3):
             print("Gracias por usar nuestro sistema")
             isActive = False
