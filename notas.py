@@ -42,9 +42,10 @@ while(isActive):
 
                 else:
                     if (opNotas in [1,2,3]):
-                        
+
                         codigoEstudiante = input("Ingrese el codigo del estudiante: ")
 
+                        #implementar while para ingresar la cantidad de notas necesarias sin necesidad de reingresar el codigo del estudiante
                         if(opNotas == 1):
                             nota = int(input("Ingrese la nota del parcial: "))
                         elif(opNotas == 2):
@@ -53,7 +54,6 @@ while(isActive):
                             nota = int(input("Ingrese la nota del trabajo: "))
 
                         for item in alumnos:
-                            
                             if codigoEstudiante in item:
                                 if opNotas == 1:
                                     item[3].append(nota)
