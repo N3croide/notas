@@ -1,0 +1,1 @@
+Porcentajes de notas = P60 Q25 T15

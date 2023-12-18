@@ -3,7 +3,7 @@ import os
 alumnos = []
 isActive = True
 menu = "1. Registrar Alumno\n2. Registrar Nota\n3. Buscar un estudiante\n4. Salir\nSeleccione una opcion: "
-subMenuNotas = ["Pariales","Quices","Trabajos","Regresar al menu principal"]
+subMenuNotas = ["Parciales","Quices","Trabajos","Regresar al menu principal"]
 opMenu = 0
 while(isActive):
     os.system("clear")
@@ -17,7 +17,7 @@ while(isActive):
             rta = "S"
             while(rta in ["S","s"]):
                 codigoEstudiante = input("Ingrese el codigo del estudiante: ")
-                nobmreEstudiante = input("Ingrese el nobmre del estudiante: ")
+                nobmreEstudiante = input("Ingrese el nombre del estudiante: ")
                 edadEstudiante = int(input(f"Ingrese la edad del estudiante {nobmreEstudiante}: "))
                 estudiante = [codigoEstudiante,nobmreEstudiante,edadEstudiante,[],[],[]]
                 alumnos.append(estudiante)
@@ -42,30 +42,35 @@ while(isActive):
 
                 else:
                     if (opNotas in [1,2,3]):
+                        
+                        otroEstudiante = "S"
+                        while(otroEstudiante in ["s","S"]):
+                            codigoEstudiante = input("Ingrese el codigo del estudiante: ")
+                            rta = "S"
+                            while(rta in ["S","s"]):
+                                if(opNotas == 1):
+                                    nota = float(input("Ingrese la nota del parcial: "))
+                                elif(opNotas == 2):
+                                    nota = float(input("Ingrese la nota del quiz: "))
+                                elif(opNotas == 3):
+                                    nota = float(input("Ingrese la nota del trabajo: "))
 
-                        codigoEstudiante = input("Ingrese el codigo del estudiante: ")
-
-                        #implementar while para ingresar la cantidad de notas necesarias sin necesidad de reingresar el codigo del estudiante
-                        if(opNotas == 1):
-                            nota = int(input("Ingrese la nota del parcial: "))
-                        elif(opNotas == 2):
-                            nota = int(input("Ingrese la nota del quiz: "))
-                        elif(opNotas == 3):
-                            nota = int(input("Ingrese la nota del trabajo: "))
-
-                        for item in alumnos:
-                            if codigoEstudiante in item:
-                                if opNotas == 1:
-                                    item[3].append(nota)
-                                    print(item)
-                                elif opNotas == 2:
-                                    item[4].append(nota)
-                                    print(item)
-                                else:
-                                    item[5].append(nota)
-                                    print(item)
-                            else:
-                                print(f"El estudiante con codigo {codigoEstudiante} no existe")
+                                for item in alumnos:
+                                    if codigoEstudiante in item:
+                                        if opNotas == 1:
+                                            item[3].append(nota)
+                                            print(item)
+                                        elif opNotas == 2:
+                                            item[4].append(nota)
+                                            print(item)
+                                        else:
+                                            item[5].append(nota)
+                                            print(item)
+                                    else:
+                                        print(f"El estudiante con codigo {codigoEstudiante} no existe")
+                                        break
+                                rta = input("¿Desea registrar otra nota? S(si) o N(no)")
+                            otroEstudiante = input("¿Desea ingresar la nota de otro estudiante? S(si) o N(no)")
                     elif(opNotas == 4):
                         isActiveGrade = False
                     else:
