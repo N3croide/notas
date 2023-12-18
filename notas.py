@@ -95,4 +95,3 @@ while(isActive):
             print("Opcion invalida")
     
     os.system("wait")
-
