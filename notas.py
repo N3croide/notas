@@ -2,7 +2,7 @@ import os
 
 alumnos = []
 isActive = True
-menu = "1. Registrar Alumno\n2. Registrar Nota\n3. Buscar un estudiante\n4. Salir\nSeleccione una opcion: "
+menu = "1. Registrar Alumno\n2. Registrar Nota\n3. Buscar un estudiante\n4. Salir\n5. Mostrar definitivas\nSeleccione una opcion: "
 subMenuNotas = ["Parciales","Quices","Trabajos","Regresar al menu principal"]
 opMenu = 0
 while(isActive):
