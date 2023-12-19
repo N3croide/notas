@@ -2,12 +2,8 @@ import os
 
 alumnos = []
 isActive = True
-<<<<<<< HEAD
-menu = "1. Registrar Alumno\n2. Registrar Nota\n3. Buscar un estudiante\n4. Salir\n5. Mostrar definitivas\nSeleccione una opcion: "
-=======
 porcentajeNotas = (0.6,0.15,0.25)
-menu = "1. Registrar Alumno\n2. Registrar Nota\n3. Buscar un estudiante\n4. Mosstrar notas\n5. Salir\nSeleccione una opcion: "
->>>>>>> 2d601fcc8ddb4ff949bae2426a968ddb1404d6c3
+menu = "1. Registrar Alumno\n2. Registrar Nota\n3. Buscar un estudiante\n4. Mostrar notas\n5. Salir\nSeleccione una opcion: "
 subMenuNotas = ["Parciales","Quices","Trabajos","Regresar al menu principal"]
 opMenu = 0
 while(isActive):
